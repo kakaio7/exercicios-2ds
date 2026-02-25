@@ -33,17 +33,17 @@ Prazo de Entrega 1: - (2,5 pt) | Prazo de Entrega 2: - (1,5 pt)
 Previsão para 31-mar | Quantidade de Indivíduos: 3 pessoas (3-5 min de apresentação)
 - Prova Bimestral: previsão para 07-abr
 - **Projeto 1 -**<br>
-Prazo de Entrega 1: - (2,5 pt) | Prazo de Entrega 2: - (1,5 pt)
+Prazo de Entrega 1: - (5 pt) | Prazo de Entrega 2: - (3 pt)
 - **Projeto 2 -**<br>
-Prazo de Entrega 1: - (2,5 pt) | Prazo de Entrega 2: - (1,5 pt)
+Prazo de Entrega 1: - (5 pt) | Prazo de Entrega 2: - (3 pt)
 
 ### Gestão de Startup I
 - Projeto Pessoal: Apresentar os insights do Instagram das startups desenvolvidas, contendo 5 posts e 25 seguidores.
 Previsão para 02-abr | Quantidade de Indivíduos: grupo com até 5 pessoas (5-10 min de apresentação)
 - Prova Bimestral: previsão para 09-abr
 - **Projeto 1 -**<br>
-Prazo de Entrega 1: - (2,5 pt) | Prazo de Entrega 2: - (1,5 pt)
+Prazo de Entrega 1: - (5 pt) | Prazo de Entrega 2: - (3 pt)
 - **Projeto 2 -**<br>
-Prazo de Entrega 1: - (2,5 pt) | Prazo de Entrega 2: - (1,5 pt)
+Prazo de Entrega 1: - (5 pt) | Prazo de Entrega 2: - (3 pt)
 
 OBS: É necessário que todos os exercícios estejam concluídos até um dia antes da apresentação do projeto pessoal. Caso o aluno não tenha completado os exercícios, terá -3 pontos na nota Qualitativa.

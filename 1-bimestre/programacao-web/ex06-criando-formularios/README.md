@@ -1,38 +1,29 @@
 # 📝 Atividade Rápida
 
-## **Criando tabelas**
+## Criando formulários
 
-Crie um arquivo `index.html` contendo:
+Crie um `index.html` contendo:
 
-### 1. Estrutura completa HTML
-
-- `<!DOCTYPE html>`
-- `<html>`
-- `<head>`
-- `<body>`
-
-### 2. Um `<h1>` com:
+### 1. Um `<h1>`:
 
 ```
-Tabela de Produtos
+Formulário de Inscrição
 ```
 
-### 3. Uma tabela com:
+### 2. Um `<form>` contendo:
 
-Cabeçalho:
+- Campo Nome (type text)
+- Campo Email (type email)
+- Campo Senha (type password)
+- Um `<select>` de disciplinas com opções:
+    - HTML
+    - CSS
+    - JavaScript
+- Um `<textarea>`
+- Um botão de envio com:
 
-- Produto
-- Preço
-- Estoque
-
-Dados:
-
-- Notebook | 3500 | 10
-- Mouse | 80 | 50
-- Teclado | 150 | 30
-
-### 4. A tabela deve ter `<caption>` com:
-
+```html
+value="Cadastrar"
 ```
-Lista de Produtos
-```
+
+Use `<br>` para organizar visualmente.
