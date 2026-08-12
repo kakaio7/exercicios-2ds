@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: 3-bimestre/orientacao-a-objetos/projetos/projeto1-sistema-de-biblioteca/nivel1
+        working-directory: 3-bimestre/orientacao-a-objetos/projetos/projeto1-sistema-de-biblioteca
     steps:
       - uses: actions/checkout@v4
       - run: npm install
