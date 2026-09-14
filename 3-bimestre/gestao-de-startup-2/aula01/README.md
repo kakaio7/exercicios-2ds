@@ -149,5 +149,13 @@ Leia a situação abaixo:
 Responda:
 
 1. Qual foi o problema identificado?
+
+R: O problema identificado foi que muitos alunos esqueciam os trabalhos escolares.
+
 2. Em que momento ocorreu o planejamento?
+
+R: O planejamento ocorreu depois da ideia de criar o aplicativo, quando a equipe decidiu como ele seria desenvolvido e quais funções teria.
+
 3. Por que os testes foram importantes antes do lançamento?
+
+R: Os testes foram importantes para verificar se o aplicativo funcionava corretamente e identificar possíveis erros ou melhorias antes de disponibilizá-lo para toda a escola.
