@@ -219,5 +219,19 @@ Ela possui um protótipo simples desenhado em papel.
 Crie:
 
 1. Uma tarefa que será dada ao usuário.
+
+R: Tarefa: Pedir ao usuário para encontrar uma tarefa de Matemática e verificar como ele faria para adicionar uma nova tarefa.
+
 2. Duas coisas que a equipe deverá observar.
+
+R: O que observar:
+
+Se o usuário consegue encontrar as tarefas facilmente.
+
+Se ele fica confuso ou tem dificuldade para realizar alguma ação.
+
 3. Uma pergunta para fazer depois do teste.
+
+R: Pergunta após o teste:
+
+“O que foi mais difícil ou confuso ao utilizar o protótipo?”
