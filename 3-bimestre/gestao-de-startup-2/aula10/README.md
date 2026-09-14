@@ -317,3 +317,9 @@ Identifique cada uma:
 - MVP
 - MLP
 - MMP
+
+R: Situação A é MVP
+
+R: Situação B é MLP
+
+R: Situação C MMP
