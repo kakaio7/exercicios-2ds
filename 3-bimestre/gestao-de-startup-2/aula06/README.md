@@ -240,5 +240,13 @@ A equipe consegue realizar apenas **três tarefas** nesta Sprint.
 ### Perguntas
 
 1. Quais três tarefas você escolheria?
+
+R: A, C e E.
+
 2. Por que elas devem ter prioridade?
+
+R: Elas devem ter prioridade porque corrigem problemas importantes e afetam diretamente os usuários. A e E corrigem erros que podem impedir o uso do sistema ou causar perda de dados, enquanto C adiciona uma funcionalidade importante para os usuários.
+
 3. Qual seria um possível objetivo para essa Sprint?
+
+R: Objetivo da Sprint: Melhorar a segurança e o acesso dos usuários ao sistema, corrigindo problemas de login e perda de dados e implementando a recuperação de senha.
