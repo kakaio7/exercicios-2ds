@@ -1,10 +1,12 @@
 {
   "name": "projeto5-kakaio7",
   "version": "1.0.0",
-  "description": "",
+  "description": "Servidor de status da lava rapido",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node servidor.js",
+    "dev": "node --watch --env-file=.env servidor.js"
   },
   "keywords": [],
   "author": "",

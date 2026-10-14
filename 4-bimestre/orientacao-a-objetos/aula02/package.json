@@ -4,7 +4,9 @@
   "description": "Usar o modo watch do Node. Entender variáveis de ambiente e usar o process.env. Criar um servidor HTTP com o módulo http. Responder a uma requisição com status e corpo.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node index.js",
+    "dev": "node --watch index.js"
   },
   "keywords": [],
   "author": "",
