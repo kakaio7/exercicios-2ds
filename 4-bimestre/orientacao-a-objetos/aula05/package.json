@@ -16,5 +16,8 @@
   "devDependencies": {
     "jest": "^30.4.2",
     "supertest": "^7.1.4"
+  },
+  "directories": {
+    "test": "test"
   }
 }
