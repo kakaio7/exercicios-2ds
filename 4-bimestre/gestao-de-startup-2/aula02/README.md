@@ -212,4 +212,9 @@ Troque de computador com os colegas ao lado. Cada um segue o funil do outro **s�
 **3. Decida**
 
 - **Decisão:** o que você mudaria no app.
+- 
+- R: Eu melhoraria o botão “Experimentar” e deixaria mais claro como o EstudaMais ajuda a organizar os estudos, incentivando os usuários a conhecerem o aplicativo.
+- 
 - **Motivo:** a maior queda, com o número (ex.: *"só 2 de 6 pessoas clicaram em Experimentar"*).
+- 
+- R: A maior queda deve ser identificada pelos números coletados no funil AARRR. Por exemplo, se 6 pessoas acessaram a página, mas apenas 2 clicaram em “Experimentar”, a queda na ativação foi de 66,7%. Isso indica que precisamos tornar a proposta do aplicativo mais interessante para os visitantes.
