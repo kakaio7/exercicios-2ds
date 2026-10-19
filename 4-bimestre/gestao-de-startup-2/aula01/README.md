@@ -233,7 +233,6 @@ Confira: digite as 20 notas do exemplo da aula. O resultado precisa ser **NPS 35
 Deixe a página aberta no seu computador. Visite os colegas ao lado e dê nota nos apps deles; peça que eles deem nota no seu. Tente conseguir **pelo menos 5 respostas**.
 
 **3. Responda**
-
 - Quantas respostas e qual o NPS?
 - 
 - R: 14 respostas
