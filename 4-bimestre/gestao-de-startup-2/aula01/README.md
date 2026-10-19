@@ -235,4 +235,11 @@ Deixe a página aberta no seu computador. Visite os colegas ao lado e dê nota n
 **3. Responda**
 
 - Quantas respostas e qual o NPS?
+- 
+- R: 14 respostas
+- 
+- R: 47 NPS
+- 
 - Complete: *"Se este NPS cair, eu vou ______."*
+
+- R: Se este NPS cair, eu vou identificar os motivos da insatisfação e buscar melhorias para manter ou aumentar a satisfação dos usuários.  
