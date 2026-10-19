@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>EstudaMais | Funil AARRR</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #17233d;
+      background: #f5f7fb;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      --muted: #68758e;
+      --border: #e4e9f2;
+      --blue: #3659d9;
+      --blue-dark: #2747bd;
+      --red: #b42318;
+      --red-bg: #fff1f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      padding: 48px 20px;
+      background:
+        radial-gradient(ellipse at 8% 0%, rgba(92, 119, 255, 0.1), transparent 34rem),
+        #f5f7fb;
+    }
+
+    main {
+      width: min(100%, 960px);
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      font-size: 1rem;
+      font-weight: 750;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 14px;
+      background: #e7ecff;
+      color: var(--blue);
+      font-size: 1.25rem;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .panel {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: 0 20px 60px rgba(33, 50, 91, 0.08);
+    }
+
+    .intro,
+    .funnel {
+      padding: clamp(24px, 5vw, 40px);
+    }
+
+    .intro {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 680px;
+      margin: 0;
+      font-size: clamp(1.8rem, 5vw, 2.65rem);
+      letter-spacing: -0.055em;
+      line-height: 1.12;
+    }
+
+    .description {
+      max-width: 650px;
+      margin: 16px 0 24px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .action-area {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    button {
+      min-height: 46px;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 12px;
+      background: var(--blue);
+      color: #fff;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+      transition: background 150ms ease, transform 150ms ease;
+    }
+
+    button:hover:not(:disabled) {
+      transform: translateY(-1px);
+      background: var(--blue-dark);
+    }
+
+    button:focus-visible,
+    input:focus-visible + label {
+      outline: 3px solid rgba(54, 89, 217, 0.35);
+      outline-offset: 3px;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.48;
+    }
+
+    .secondary-button {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: #42506b;
+    }
+
+    .secondary-button:hover:not(:disabled) {
+      background: #f5f7fb;
+      color: #17233d;
+    }
+
+    .status {
+      min-height: 1.4em;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .status.error {
+      color: var(--red);
+    }
+
+    .funnel-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.3rem;
+      letter-spacing: -0.03em;
+    }
+
+    .storage-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .stages {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .stage {
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #fbfcff;
+    }
+
+    .stage-name {
+      margin: 0;
+      color: #42506b;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .stage-count {
+      margin: 8px 0 12px;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.06em;
+    }
+
+    .conversion {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    .stage.is-largest-drop {
+      border-color: #f1a6a0;
+      background: var(--red-bg);
+      color: #7a271a;
+      box-shadow: 0 0 0 1px rgba(180, 35, 24, 0.08);
+    }
+
+    .stage.is-largest-drop .stage-name,
+    .stage.is-largest-drop .conversion {
+      color: #912018;
+    }
+
+    .drop-badge {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #fee4e2;
+      color: #912018;
+      font-size: 0.7rem;
+      font-weight: 800;
+    }
+
+    .rating {
+      margin: 20px 0 0;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .rating legend {
+      padding: 0 6px;
+      font-weight: 700;
+    }
+
+    .rating-options {
+      display: grid;
+      grid-template-columns: repeat(11, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .rating-option {
+      position: relative;
+    }
+
+    .rating-option input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+
+    .rating-option label {
+      display: grid;
+      min-height: 44px;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+      color: #42506b;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .rating-option input:checked + label {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .rating-hints {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+
+    .rating-submit {
+      margin-top: 16px;
+    }
+
+    .follow-up-actions {
+      margin-top: 20px;
+    }
+
+    .rating[hidden] {
+      display: none;
+    }
+
+    .reset-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 16px;
+    }
+
+    .reset-button {
+      min-height: 38px;
+      padding: 0 14px;
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 28px 14px;
+      }
+
+      .stages {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .stage:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .rating-options {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+
+      .rating {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="brand" aria-label="EstudaMais">
+      <div class="brand-mark" aria-hidden="true">✦</div>
+      <div>
+        EstudaMais
+        <span>Organize seus estudos no seu ritmo</span>
+      </div>
+    </header>
+
+    <div class="panel">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Seu próximo passo nos estudos</p>
+        <h1 id="page-title">Aprender mais, no seu ritmo.</h1>
+        <p class="description">O EstudaMais ajuda você a organizar os estudos, acompanhar seu progresso e aprender cada vez mais, sem perder o seu ritmo.</p>
+        <div class="action-area">
+          <button id="try-button" type="button">Experimentar</button>
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="funnel" aria-labelledby="funnel-title">
+        <div class="funnel-heading">
+          <h2 id="funnel-title">Funil AARRR</h2>
+          <p class="storage-note">Contagens compartilhadas neste navegador</p>
+        </div>
+
+        <div class="stages" id="stages" aria-live="polite">
+          <article class="stage" data-stage="acquisition">
+            <p class="stage-name">Aquisição</p>
+            <p class="stage-count" id="count-acquisition">0</p>
+            <p class="conversion">Visitas à página</p>
+          </article>
+          <article class="stage" data-stage="activation">
+            <p class="stage-name">Ativação</p>
+            <p class="stage-count" id="count-activation">0</p>
+            <p class="conversion" id="conversion-activation">— conversão</p>
+          </article>
+          <article class="stage" data-stage="retention">
+            <p class="stage-name">Retenção</p>
+            <p class="stage-count" id="count-retention">0</p>
+            <p class="conversion" id="conversion-retention">— conversão</p>
+          </article>
+          <article class="stage" data-stage="revenue">
+            <p class="stage-name">Receita</p>
+            <p class="stage-count" id="count-revenue">0</p>
+            <p class="conversion" id="conversion-revenue">— conversão</p>
+          </article>
+          <article class="stage" data-stage="referral">
+            <p class="stage-name">Recomendação</p>
+            <p class="stage-count" id="count-referral">0</p>
+            <p class="conversion" id="conversion-referral">— conversão</p>
+          </article>
+        </div>
+
+        <div class="action-area follow-up-actions">
+          <button id="retention-button" type="button" disabled>Quero usar de novo</button>
+          <button id="revenue-button" class="secondary-button" type="button" disabled>Eu pagaria por isso</button>
+        </div>
+
+        <form id="rating-form">
+          <fieldset class="rating" id="rating-fieldset" hidden>
+            <legend>De 0 a 10, quanto você recomendaria o EstudaMais?</legend>
+            <div class="rating-options" id="rating-options"></div>
+            <div class="rating-hints" aria-hidden="true">
+              <span>Não recomendaria</span>
+              <span>Recomendaria muito</span>
+            </div>
+            <button class="rating-submit" type="submit">Enviar nota</button>
+          </fieldset>
+        </form>
+
+        <div class="reset-row">
+          <button id="reset-button" class="secondary-button reset-button" type="button">Zerar contagens</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const STORAGE_KEY = "estudamais-aarrr-v1";
+    const STAGES = ["acquisition", "activation", "retention", "revenue", "referral"];
+    const EMPTY_COUNTS = {
+      acquisition: 0,
+      activation: 0,
+      retention: 0,
+      revenue: 0,
+      referral: 0
+    };
+
+    const status = document.getElementById("status");
+    const tryButton = document.getElementById("try-button");
+    const retentionButton = document.getElementById("retention-button");
+    const revenueButton = document.getElementById("revenue-button");
+    const ratingForm = document.getElementById("rating-form");
+    const ratingFieldset = document.getElementById("rating-fieldset");
+    const resetButton = document.getElementById("reset-button");
+    let counts;
+    let storageAvailable = true;
+    const completed = {
+      activation: false,
+      retention: false,
+      revenue: false,
+      referral: false
+    };
+
+    function readCounts() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === null) {
+        return { ...EMPTY_COUNTS };
+      }
+
+      const parsed = JSON.parse(saved);
+      const valid = parsed && typeof parsed === "object"
+        && STAGES.every((stage) => Number.isSafeInteger(parsed[stage]) && parsed[stage] >= 0);
+      if (!valid) {
+        throw new Error("Os dados salvos do funil estão inválidos. Zere as contagens para começar novamente.");
+      }
+      return Object.fromEntries(STAGES.map((stage) => [stage, parsed[stage]]));
+    }
+
+    function saveCounts() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(counts));
+        storageAvailable = true;
+        status.classList.remove("error");
+        status.textContent = "";
+        return true;
+      } catch (error) {
+        storageAvailable = false;
+        status.classList.add("error");
+        status.textContent = "Não foi possível salvar no localStorage. Verifique as configurações do navegador.";
+        console.error("Erro ao salvar as métricas do funil AARRR:", error);
+        return false;
+      }
+    }
+
+    function showStorageError(error) {
+      storageAvailable = false;
+      status.classList.add("error");
+      status.textContent = error instanceof SyntaxError
+        ? "Os dados salvos do funil não puderam ser lidos. Zere as contagens para começar novamente."
+        : error.message;
+      console.error("Erro ao carregar as métricas do funil AARRR:", error);
+    }
+
+    function renderCounts() {
+      let largestDropIndex = -1;
+      let largestDrop = 0;
+
+      STAGES.forEach((stage, index) => {
+        document.getElementById(`count-${stage}`).textContent = counts[stage];
+        const card = document.querySelector(`[data-stage="${stage}"]`);
+        card.classList.remove("is-largest-drop");
+        const badge = card.querySelector(".drop-badge");
+        if (badge) {
+          badge.remove();
+        }
+
+        if (index === 0) {
+          return;
+        }
+
+        const previousCount = counts[STAGES[index - 1]];
+        const conversion = previousCount === 0 ? null : counts[stage] / previousCount * 100;
+        document.getElementById(`conversion-${stage}`).textContent = conversion === null
+          ? "— conversão (sem etapa anterior)"
+          : `${conversion.toFixed(1)}% de conversão`;
+
+        if (conversion !== null) {
+          const drop = 100 - conversion;
+          if (drop > largestDrop) {
+            largestDrop = drop;
+            largestDropIndex = index;
+          }
+        }
+      });
+
+      if (largestDropIndex > 0) {
+        const stage = STAGES[largestDropIndex];
+        const card = document.querySelector(`[data-stage="${stage}"]`);
+        card.classList.add("is-largest-drop");
+        const badge = document.createElement("span");
+        badge.className = "drop-badge";
+        badge.textContent = `Maior queda: ${largestDrop.toFixed(1)}%`;
+        card.append(badge);
+      }
+    }
+
+    function updateActions() {
+      tryButton.disabled = !storageAvailable || completed.activation;
+      retentionButton.disabled = !storageAvailable
+        || !completed.activation
+        || completed.retention;
+      revenueButton.disabled = !storageAvailable
+        || !completed.retention
+        || completed.revenue;
+      ratingFieldset.hidden = !storageAvailable
+        || !completed.revenue
+        || completed.referral;
+    }
+
+    function recordStage(stage) {
+      if (!storageAvailable) {
+        return;
+      }
+
+      counts[stage] += 1;
+      if (!saveCounts()) {
+        counts[stage] -= 1;
+        return;
+      }
+      renderCounts();
+      updateActions();
+    }
+
+    function setupRatings() {
+      const options = document.getElementById("rating-options");
+      for (let score = 0; score <= 10; score += 1) {
+        const option = document.createElement("div");
+        option.className = "rating-option";
+        const input = document.createElement("input");
+        input.id = `rating-${score}`;
+        input.type = "radio";
+        input.name = "nps";
+        input.value = String(score);
+        input.required = true;
+        const label = document.createElement("label");
+        label.htmlFor = input.id;
+        label.textContent = String(score);
+        option.append(input, label);
+        options.append(option);
+      }
+    }
+
+    function startVisit() {
+      try {
+        counts = readCounts();
+        counts.acquisition += 1;
+        if (!saveCounts()) {
+          counts.acquisition -= 1;
+        }
+      } catch (error) {
+        counts = { ...EMPTY_COUNTS };
+        showStorageError(error);
+      }
+      renderCounts();
+      updateActions();
+    }
+
+    tryButton.addEventListener("click", () => {
+      completed.activation = true;
+      recordStage("activation");
+      status.textContent = "Que bom ter você por aqui! Explore seu plano de estudos.";
+    });
+
+    retentionButton.addEventListener("click", () => {
+      completed.retention = true;
+      recordStage("retention");
+      status.textContent = "Bem-vindo de volta! Sua jornada continua.";
+    });
+
+    revenueButton.addEventListener("click", () => {
+      completed.revenue = true;
+      recordStage("revenue");
+      status.textContent = "Obrigado por considerar apoiar o EstudaMais.";
+    });
+
+    ratingForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const selected = ratingForm.querySelector('input[name="nps"]:checked');
+      if (!selected) {
+        return;
+      }
+      if (Number(selected.value) < 9) {
+        status.textContent = "Obrigado pela resposta! Notas 9 e 10 contam como recomendação no funil.";
+        return;
+      }
+
+      completed.referral = true;
+      recordStage("referral");
+      status.textContent = "Obrigado por recomendar o EstudaMais!";
+    });
+
+    resetButton.addEventListener("click", () => {
+      if (!window.confirm("Tem certeza de que deseja zerar as contagens salvas neste navegador?")) {
+        return;
+      }
+      counts = { ...EMPTY_COUNTS };
+      if (!saveCounts()) {
+        return;
+      }
+      Object.keys(completed).forEach((stage) => {
+        completed[stage] = false;
+      });
+      renderCounts();
+      updateActions();
+      status.textContent = "Contagens zeradas.";
+    });
+
+    setupRatings();
+    startVisit();
+  </script>
+</body>
+</html>
