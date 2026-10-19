@@ -238,7 +238,7 @@ Deixe a página aberta no seu computador. Visite os colegas ao lado e dê nota n
 - 
 - R: 14 respostas
 - 
-- R: 47 NPS
+- R: 50 NPS
 - 
 - Complete: *"Se este NPS cair, eu vou ______."*
 
