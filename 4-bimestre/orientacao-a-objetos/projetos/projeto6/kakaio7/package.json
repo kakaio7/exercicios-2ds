@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node servidor.js",
     "test": "jest"
   },
   "keywords": [],
