@@ -72,8 +72,6 @@ A decisão, sua justificativa, o responsável e a data de revisão devem estar r
 - 📝 [**Decisão coletiva — `decisao.md`](metricas/decisao.md): registro da decisão, justificativa numérica, responsável e data de revisão.
 - 🛠️ [**Issue #1 — Ação prioritária](https://github.com/kakaio7/start-up/issues/1): acompanhamento das tarefas para melhorar o cadastro e o primeiro acesso.
 
-> **Sobre os dados:** os números do painel devem ser identificados como reais ou simulados, conforme sua origem. Os valores simulados não devem ser apresentados como resultados reais de usuários.
-
 ---
 
 ## 🛠️ Tecnologias utilizadas
