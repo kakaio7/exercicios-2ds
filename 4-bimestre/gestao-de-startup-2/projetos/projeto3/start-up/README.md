@@ -1,10 +1,10 @@
-# 🚀 StartUP — Painel de Métricas do Produto
+# StartUP — Painel de Métricas do Produto
 
 ### Conectando pessoas. Construindo startups. Transformando ideias em realidade.
 
 ---
 
-## 💡 Sobre o projeto
+## Sobre o projeto
 
 O **StartUP** é uma plataforma que conecta pessoas interessadas em criar startups, encontrar sócios e formar equipes com habilidades complementares.
 
@@ -12,11 +12,11 @@ A proposta é funcionar como uma rede social voltada ao empreendedorismo, permit
 
 Por exemplo, uma pessoa que precisa de um desenvolvedor back-end pode publicar essa necessidade e encontrar alguém interessado em participar da equipe.
 
-## 🎯 Objetivo do produto
+## Objetivo do produto
 
 Facilitar a criação de startups por meio da conexão entre pessoas, ideias e habilidades, incentivando a colaboração e o desenvolvimento de novos negócios.
 
-## 👥 Público-alvo
+## Público-alvo
 
 - Empreendedores que desejam tirar ideias do papel.
 - Desenvolvedores e profissionais de tecnologia.
@@ -24,7 +24,7 @@ Facilitar a criação de startups por meio da conexão entre pessoas, ideias e h
 - Pessoas que procuram sócios ou colaboradores.
 - Estudantes interessados em inovação e empreendedorismo.
 
-## ⚙️ Funcionalidades do produto
+## Funcionalidades do produto
 
 - **Perfis de usuários:** apresentação de habilidades e interesses.
 - **Publicação de projetos:** divulgação de ideias e oportunidades.
@@ -34,68 +34,86 @@ Facilitar a criação de startups por meio da conexão entre pessoas, ideias e h
 
 ---
 
-## 📊 Projeto 3 — Painel de Métricas do Produto
+## Projeto 3 — Painel de Métricas do Produto
 
 O objetivo desta etapa é acompanhar o desempenho do StartUP por meio de métricas de produto e de código, identificar dificuldades e tomar decisões coletivas com base nos resultados analisados.
 
-### 📈 Métricas acompanhadas
+### Métricas acompanhadas
 
-| Categoria | Indicadores |
-|:--|:--|
-| Produto | Ativação de usuários, retenção e NPS |
-| Código | Commits realizados e bugs identificados |
+| **Categoria** | **Indicadores** |
+|---|---|
+| Produto | Taxa de ativação, retenção e NPS |
+| Código | Commits realizados e bugs em aberto |
 
-Cada métrica apresenta seu valor, o período analisado e uma ação que a equipe poderá tomar caso o resultado piore.
+Cada indicador apresenta seu valor atual, o período analisado e uma ação definida pela equipe para responder a uma possível piora do resultado.
 
-### 🧮 Cálculos e análise
+### Cálculos e análise
 
-O painel acompanha os seguintes indicadores:
+O painel apresenta os cálculos e as interpretações dos seguintes indicadores:
 
-- **NPS:** avalia a satisfação dos usuários com base nas respostas à pesquisa.
-- **Retenção:** percentual de usuários de uma mesma coorte que continuam ativos no período analisado.
-- **Churn:** percentual de usuários da mesma coorte que deixaram de retornar no período.
-- **Funil AARRR:** analisa as etapas de aquisição, ativação, retenção, recomendação e receita para identificar a maior queda de usuários.
+- **Taxa de ativação:** percentual de visitantes que realizam uma ação importante no produto.
+- **Retenção:** percentual dos usuários de uma mesma coorte que voltam a utilizar o produto.
+- **Churn:** percentual dos usuários da mesma coorte que não retornam durante o período de acompanhamento.
+- **NPS (Net Promoter Score):** indicador de satisfação e disposição dos usuários para recomendar o produto.
+- **Commits:** registros de alterações realizadas no código do projeto.
+- **Bugs em aberto:** erros identificados que ainda precisam ser corrigidos.
+- **Funil AARRR:** análise das etapas de aquisição, ativação, retenção, receita e recomendação para identificar a maior queda de usuários.
 
-Os cálculos, os valores utilizados e as interpretações estão registrados no painel de métricas.
+Os valores, as fórmulas, as interpretações e as ações correspondentes estão documentados em [`metricas/painel.md`](metricas/painel.md).
 
-### 🧭 Decisão coletiva
+### Decisão coletiva
 
-A equipe definiu como ação prioritária **simplificar o cadastro e melhorar as orientações do primeiro acesso**, com o objetivo de facilitar a ativação de novos usuários.
+Após discutir as alternativas e realizar a votação, a equipe definiu como ação prioritária **simplificar o cadastro e melhorar as orientações do primeiro acesso ao StartUP**.
 
-Nos dados simulados utilizados como exemplo, de 20 visitantes, 6 foram ativados. Isso representa uma taxa de queda de 70% entre aquisição e ativação, indicando uma oportunidade de melhoria no primeiro acesso.
+A decisão foi motivada pela queda estimada de 70% entre aquisição e ativação: dos 20 visitantes considerados no painel, 6 foram ativados e 14 não chegaram à etapa de ativação.
 
-A decisão, sua justificativa, o responsável e a data de revisão devem estar registrados no arquivo `decisao.md`.
+A equipe priorizará essa melhoria para facilitar a entrada de novos usuários e reduzir as dificuldades no primeiro acesso.
 
-### 📁 Arquivos do projeto
+O registro formal da decisão, incluindo a justificativa, o responsável e a data de revisão, está disponível em [`metricas/decisao.md`](metricas/decisao.md).
 
-- 📊 [**Painel de métricas — `painel.md`](metricas/painel.md): indicadores de produto e código, cálculos de NPS, retenção e churn, funil AARRR e análise dos resultados.
-- 📝 [**Decisão coletiva — `decisao.md`](metricas/decisao.md): registro da decisão, justificativa numérica, responsável e data de revisão.
-- 🛠️ [**Issue #1 — Ação prioritária](https://github.com/kakaio7/start-up/issues/1): acompanhamento das tarefas para melhorar o cadastro e o primeiro acesso.
+### Arquivos do projeto
+
+- [**Painel de métricas — `painel.md`](metricas/painel.md): indicadores de produto e código, cálculos de NPS, retenção e churn, funil AARRR e análise dos resultados.
+- [**Decisão coletiva — `decisao.md`](metricas/decisao.md): registro da decisão da equipe, justificativa numérica, responsável e data de revisão.
+- [**Issue #1 — Ação prioritária**](https://github.com/kakaio7/start-up/issues/1): acompanhamento das tarefas para simplificar o cadastro e melhorar o primeiro acesso.
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - **Frontend:** React.
 - **Versionamento e colaboração:** Git e GitHub.
 
-## 👥 Equipe
+## Equipe
 
-| Integrante | Projeto |
-|:--|:--|
+| **Integrante** | **Projeto** |
+|---|---|
 | Kauã | StartUP |
 | Eryck | StartUP |
 | Mario | StartUP |
 | Caio | StartUP |
 | Wanessa | StartUP |
 
+## Organização da equipe
+
+As responsabilidades foram distribuídas para permitir a execução das atividades em paralelo, mantendo a participação coletiva nas decisões do projeto.
+
+| **Função** | **Responsabilidade** |
+|---|---|
+| Métricas de produto | Analisar retenção, engajamento e NPS. |
+| Métricas de código | Verificar commits, pull requests (PRs), bugs e desempenho. |
+| Painel | Organizar os indicadores, os valores e os cálculos. |
+| Documentação | Registrar o funil AARRR e a decisão coletiva. |
+
+A divisão de responsabilidades orienta a execução das tarefas, enquanto as decisões sobre as prioridades do produto são discutidas e tomadas por toda a equipe.
+
 **Atividade:** Projeto 3 — Painel de Métricas do Produto.
 
-## 📌 Status do projeto
+## Status do projeto
 
 **Em desenvolvimento.**
 
-A equipe busca aprimorar a plataforma continuamente, utilizando os indicadores e as necessidades dos usuários para orientar as próximas melhorias.
+A equipe utiliza os indicadores e as necessidades dos usuários para orientar as melhorias e acompanhar a evolução do StartUP.
 
 ---
 
