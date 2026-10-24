@@ -1,4 +1,4 @@
-# 📊 StartUP — Painel de Métricas do Produto
+# StartUP — Painel de Métricas do Produto
 
 ## 1. Identificação
 
