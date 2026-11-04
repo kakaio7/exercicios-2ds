@@ -1,0 +1,19 @@
+meta {
+  name: Criar com dias texto
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:3000/emprestimos
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "leitor": "Diego",
+    "livro": "Dom Casmurro",
+    "dias": "sete"
+  }
+}

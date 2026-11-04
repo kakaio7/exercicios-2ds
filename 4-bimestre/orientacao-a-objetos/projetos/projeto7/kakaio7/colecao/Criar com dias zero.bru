@@ -1,0 +1,19 @@
+meta {
+  name: Criar com dias zero
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://localhost:3000/emprestimos
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "leitor": "Diego",
+    "livro": "Dom Casmurro",
+    "dias": 0
+  }
+}

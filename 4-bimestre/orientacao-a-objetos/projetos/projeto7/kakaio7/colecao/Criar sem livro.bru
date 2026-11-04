@@ -1,0 +1,18 @@
+meta {
+  name: Criar sem livro
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://localhost:3000/emprestimos
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "leitor": "Diego",
+    "dias": 7
+  }
+}

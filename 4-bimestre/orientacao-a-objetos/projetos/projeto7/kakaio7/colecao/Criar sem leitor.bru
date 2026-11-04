@@ -1,0 +1,18 @@
+meta {
+  name: Criar sem leitor
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:3000/emprestimos
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "livro": "Dom Casmurro",
+    "dias": 7
+  }
+}

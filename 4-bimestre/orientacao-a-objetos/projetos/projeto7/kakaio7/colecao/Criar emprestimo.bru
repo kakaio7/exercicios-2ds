@@ -1,0 +1,19 @@
+meta {
+  name: Criar emprestimo
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:3000/emprestimos
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "leitor": "Diego",
+    "livro": "Dom Casmurro",
+    "dias": 7
+  }
+}
