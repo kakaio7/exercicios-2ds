@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Pedido de ajuda</title>
+  <style>
+    :root {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #172033;
+      background: #f5f7fb;
+      font-synthesis: none;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 320px; }
+    main { width: min(720px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 64px; }
+
+    .eyebrow {
+      margin: 0 0 9px;
+      color: #5263d9;
+      font-size: .75rem;
+      font-weight: 750;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 { margin: 0; font-size: clamp(2rem, 5vw, 2.6rem); letter-spacing: -.045em; }
+    .intro { margin: 10px 0 26px; color: #647087; line-height: 1.6; }
+
+    .card {
+      padding: 26px;
+      border: 1px solid #e4e8f0;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 8px 30px rgb(27 39 74 / 4%);
+    }
+
+    form, .field { display: flex; flex-direction: column; }
+    form { gap: 18px; }
+    .field { gap: 7px; }
+    label { color: #3a455b; font-size: .87rem; font-weight: 650; }
+    .required { color: #b43e32; }
+
+    textarea {
+      width: 100%;
+      min-height: 82px;
+      padding: 11px 12px;
+      border: 1px solid #dce1eb;
+      border-radius: 9px;
+      background: #fff;
+      color: #172033;
+      font: inherit;
+      font-size: .93rem;
+      line-height: 1.5;
+      resize: vertical;
+    }
+
+    textarea:focus {
+      border-color: #6675e8;
+      outline: 3px solid rgb(102 117 232 / 17%);
+    }
+
+    textarea[aria-invalid="true"] { border-color: #c4483b; }
+    .hint { margin: 0; color: #748096; font-size: .78rem; }
+
+    button {
+      min-height: 43px;
+      padding: 10px 16px;
+      border: 0;
+      border-radius: 9px;
+      background: #5263d9;
+      color: #fff;
+      cursor: pointer;
+      font: inherit;
+      font-size: .9rem;
+      font-weight: 700;
+      transition: background .15s ease;
+    }
+
+    button:hover { background: #4051c7; }
+    button:focus-visible { outline: 3px solid rgb(82 99 217 / 30%); outline-offset: 2px; }
+
+    .message { margin-top: 24px; }
+    .message[hidden] { display: none; }
+    .message-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    h2 { margin: 0; font-size: 1.08rem; }
+    #formatted-message { min-height: 220px; background: #fafbfe; }
+    .feedback { min-height: 1.25em; margin: 9px 0 0; color: #5263d9; font-size: .84rem; }
+    .error { color: #b43e32; font-size: .84rem; }
+
+    @media (max-width: 520px) {
+      main { padding-top: 30px; }
+      .card { padding: 20px 16px; }
+      .message-header { align-items: flex-start; flex-direction: column; }
+      .message-header button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Comunicação clara</p>
+      <h1>Peça ajuda com contexto</h1>
+      <p class="intro">Conte o que você precisa, onde está o problema e o que já tentou. Campos com * são obrigatórios.</p>
+    </header>
+
+    <section class="card" aria-label="Formulário de pedido de ajuda">
+      <form id="help-form" novalidate>
+        <div class="field">
+          <label for="goal">O que quero fazer <span class="required" aria-hidden="true">*</span></label>
+          <textarea id="goal" name="goal" required aria-required="true"></textarea>
+        </div>
+        <div class="field">
+          <label for="issue">O que está acontecendo <span class="required" aria-hidden="true">*</span></label>
+          <textarea id="issue" name="issue" required aria-required="true"></textarea>
+        </div>
+        <div class="field">
+          <label for="location">Onde <span class="required" aria-hidden="true">*</span></label>
+          <textarea id="location" name="location" required aria-required="true"></textarea>
+        </div>
+        <div class="field">
+          <label for="tried">O que já tentei <span class="required" aria-hidden="true">*</span></label>
+          <textarea id="tried" name="tried" required minlength="20" aria-required="true" aria-describedby="tried-hint tried-error"></textarea>
+          <p id="tried-hint" class="hint">Descreva com pelo menos 20 caracteres.</p>
+          <p id="tried-error" class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="need">O que preciso de você <span class="required" aria-hidden="true">*</span></label>
+          <textarea id="need" name="need" required aria-required="true"></textarea>
+        </div>
+        <p id="form-error" class="error" role="alert" aria-live="assertive"></p>
+        <button type="submit">Montar pedido</button>
+      </form>
+
+      <section id="message-section" class="message" aria-labelledby="message-title" hidden>
+        <div class="message-header">
+          <h2 id="message-title">Mensagem pronta para enviar</h2>
+          <button id="copy-button" type="button">Copiar mensagem</button>
+        </div>
+        <textarea id="formatted-message" aria-label="Mensagem formatada" readonly></textarea>
+        <p id="copy-feedback" class="feedback" role="status" aria-live="polite"></p>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const form = document.querySelector("#help-form");
+      const fields = [
+        { id: "goal", label: "O que quero fazer" },
+        { id: "issue", label: "O que está acontecendo" },
+        { id: "location", label: "Onde" },
+        { id: "tried", label: "O que já tentei" },
+        { id: "need", label: "O que preciso de você" }
+      ];
+      const triedField = document.querySelector("#tried");
+      const triedError = document.querySelector("#tried-error");
+      const formError = document.querySelector("#form-error");
+      const messageSection = document.querySelector("#message-section");
+      const formattedMessage = document.querySelector("#formatted-message");
+      const copyButton = document.querySelector("#copy-button");
+      const copyFeedback = document.querySelector("#copy-feedback");
+
+      function validate() {
+        let firstInvalidField = null;
+        const emptyFields = [];
+
+        fields.forEach(({ id, label }) => {
+          const field = document.getElementById(id);
+          const empty = field.value.trim().length === 0;
+          const triedTooShort = id === "tried" && field.value.trim().length < 20;
+          const invalid = empty || triedTooShort;
+
+          field.setAttribute("aria-invalid", String(invalid));
+          if (invalid && !firstInvalidField) firstInvalidField = field;
+          if (empty) emptyFields.push(label);
+
+          if (id === "tried") {
+            triedError.textContent = triedTooShort && !empty
+              ? "Escreva pelo menos 20 caracteres sobre o que você já tentou."
+              : "";
+          }
+        });
+
+        if (emptyFields.length) {
+          formError.textContent = `Preencha todos os campos. Falta: ${emptyFields.join(", ")}.`;
+        } else {
+          formError.textContent = "";
+        }
+
+        if (firstInvalidField) firstInvalidField.focus();
+        return !firstInvalidField;
+      }
+
+      form.addEventListener("input", (event) => {
+        if (event.target instanceof HTMLTextAreaElement) {
+          event.target.removeAttribute("aria-invalid");
+          formError.textContent = "";
+          if (event.target === triedField) triedError.textContent = "";
+        }
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!validate()) return;
+
+        const values = Object.fromEntries(
+          fields.map(({ id }) => [id, document.getElementById(id).value.trim()])
+        );
+        formattedMessage.value = [
+          "Pedido de ajuda",
+          "",
+          `O que quero fazer: ${values.goal}`,
+          `O que está acontecendo: ${values.issue}`,
+          `Onde: ${values.location}`,
+          `O que já tentei: ${values.tried}`,
+          `O que preciso de você: ${values.need}`
+        ].join("\n");
+
+        messageSection.hidden = false;
+        copyFeedback.textContent = "";
+        messageSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+
+      copyButton.addEventListener("click", async () => {
+        copyFeedback.textContent = "";
+        try {
+          await navigator.clipboard.writeText(formattedMessage.value);
+          copyFeedback.textContent = "Mensagem copiada.";
+        } catch (error) {
+          formattedMessage.focus();
+          formattedMessage.select();
+          copyFeedback.textContent = "Não foi possível copiar automaticamente. A mensagem está selecionada; copie com Ctrl+C (ou ⌘C no Mac).";
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
