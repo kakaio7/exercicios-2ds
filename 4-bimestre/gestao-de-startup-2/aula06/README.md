@@ -263,4 +263,9 @@ Confira: tente enviar só `"gente, não tá funcionando aqui, me ajuda"`. O sist
 **3. Responda**
 
 - O colega precisou perguntar algo? Se sim, o que faltava no pedido?
+
+  R: Não. Expliquei que o formulário bloqueava o envio mesmo depois de preencher os campos e contei o que já tinha tentado. Ele conseguiu entender a situação sem pedir mais detalhes.
+  
 - Qual foi o feedback recebido e **uma coisa** que você vai mudar no próximo pedido?
+
+  R: Ele disse que expliquei bem o problema, mas deveria informar também o resultado esperado. No próximo pedido, vou deixar claro o que eu esperava que acontecesse.
