@@ -284,4 +284,13 @@ Confira: com os dois itens do exemplo da aula, o RICE precisa dar **300** e **3,
 **3. Responda**
 
 - Quais os 3 primeiros itens e o RICE de cada um?
+  
+  R:Louis — 750
+  
+    zé — 337,5
+  
+    Caio — 166,67
+  
 - A ordem do RICE mudou alguma coisa que você tinha planejado?
+
+  R: Sim. O RICE colocou Louis em primeiro, mesmo sendo Should, então eu reconsideraria essa prioridade. Porém, Caio continua como Won’t e não será feito agora, apesar da pontuação.
