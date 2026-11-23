@@ -1,4 +1,4 @@
-#  PDI — Eryck
+# PDI — Eryck
 
 | Integrante | Período |
 |---|---|

@@ -1,4 +1,4 @@
-#  PDI — Caio
+# PDI — Caio
 
 | Integrante | Período |
 |---|---|

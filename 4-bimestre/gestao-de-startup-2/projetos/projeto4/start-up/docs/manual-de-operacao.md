@@ -74,10 +74,12 @@ Uma tarefa estará pronta quando:
 
 ### Modelo de daily por texto
 
+Exemplo preenchido pela equipe para o ciclo do Projeto 4:
+
 ```text
-ONTEM:
-HOJE:
-TRAVADO:
+ONTEM: Revisamos os dados e a decisão do Projeto 3 para retomar a prioridade de melhorar o cadastro e o primeiro acesso.
+HOJE: Finalizamos o manual de operação, organizamos o backlog com MoSCoW e RICE e revisamos os PDIs.
+TRAVADO: Não há bloqueio técnico. As pontuações RICE são estimativas e deverão ser recalculadas quando houver dados reais de uso e esforço.
 ```
 
 ---

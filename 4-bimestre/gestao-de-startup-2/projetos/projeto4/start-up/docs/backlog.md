@@ -1,4 +1,4 @@
-#  Backlog priorizado do StartUP
+# Backlog priorizado do StartUP
 
 Os oito itens abaixo foram derivados das funcionalidades descritas para o StartUP e da decisão registrada no Projeto 3. A classificação MoSCoW define o escopo de trabalho: Must tem prioridade essencial, Should é importante, Could pode esperar e Won't fica fora deste ciclo.
 
@@ -28,7 +28,7 @@ Os oito itens abaixo foram derivados das funcionalidades descritas para o StartU
 
 ## Desempate RICE
 
-Para o desempate deste Projeto 4, o par escolhido é **buscar colaboradores** e **enviar notificações**. Ambos são classificados como Should have e disputam o tempo limitado de desenvolvimento; este cálculo define qual deles vem primeiro neste ciclo.
+Para o desempate deste Projeto 4, comparamos **buscar colaboradores** e **enviar notificações**. Ambos são classificados como Should have e disputam o tempo limitado de desenvolvimento; este cálculo define qual deles vem primeiro neste ciclo.
 
 > **Fórmula**  
 > `RICE = (Alcance × Impacto) ÷ Esforço`
@@ -40,9 +40,9 @@ Os valores abaixo são **estimativas de planejamento**, não dados medidos de pr
 | A — Buscar colaboradores por habilidade e interesse | 20 | 3 | 5 | (20 × 3) ÷ 5 = **12** |
 | B — Enviar notificações de convites e atualizações | 20 | 2 | 4 | (20 × 2) ÷ 4 = **10** |
 
-**Conclusão:** com estas estimativas, o RICE favorece A (12 contra 10).
+**Conclusão:** com estas estimativas, o RICE favorece A (12 contra 10), então a busca fica antes das notificações neste backlog.
 
-> **O número confirmou ou mudou a opinião do grupo?** Neste desempate, mudou a ordem: os dois itens estavam empatados como Should have, e a pontuação colocou a busca antes das notificações.
+> **O número confirmou ou mudou a opinião do grupo?** Mudou a ordem de prioridade registrada: os dois itens estavam empatados como Should have, e a pontuação colocou a busca antes das notificações.
 
 O cálculo depende de estimativas; se a equipe tiver dados de alcance, impacto ou esforço melhores, deve refazê-lo.
 

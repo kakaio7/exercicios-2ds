@@ -1,4 +1,4 @@
-#  PDI — Mario
+# PDI — Mario
 
 | Integrante | Período |
 |---|---|
