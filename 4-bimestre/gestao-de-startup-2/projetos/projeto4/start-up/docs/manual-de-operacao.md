@@ -72,9 +72,7 @@ Uma tarefa estará pronta quando:
 5. O que eu preciso de você
 ```
 
-### Modelo de daily por texto
-
-Exemplo preenchido pela equipe para o ciclo do Projeto 4:
+### Modelo de daily por texto preenchido pela equipe
 
 ```text
 ONTEM: Revisamos os dados e a decisão do Projeto 3 para retomar a prioridade de melhorar o cadastro e o primeiro acesso.
@@ -85,4 +83,3 @@ TRAVADO: Não há bloqueio técnico. As pontuações RICE são estimativas e dev
 ---
 
 [Voltar ao README do StartUP](../README.md)
-
