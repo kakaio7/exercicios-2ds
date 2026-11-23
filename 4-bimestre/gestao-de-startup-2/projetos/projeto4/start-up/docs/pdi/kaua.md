@@ -1,4 +1,4 @@
-# 🌱 PDI — Kauã
+#  PDI — Kauã
 
 | Integrante | Período |
 |---|---|
