@@ -1,4 +1,4 @@
-# 🌱 PDI — Wanessa
+#  PDI — Wanessa
 
 | Integrante | Período |
 |---|---|
