@@ -1,4 +1,4 @@
-# 🧭 Backlog priorizado do StartUP
+#  Backlog priorizado do StartUP
 
 Os oito itens abaixo foram derivados das funcionalidades descritas para o StartUP e da decisão registrada no Projeto 3. A classificação MoSCoW define o escopo de trabalho: Must tem prioridade essencial, Should é importante, Could pode esperar e Won't fica fora deste ciclo.
 
